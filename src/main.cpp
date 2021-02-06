@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+
 #include "Pizza.cpp"
 
 using namespace std;
@@ -29,7 +30,7 @@ int main() {
     vector<Pizza> *restaurant = new vector<Pizza>(0);
 
     Pizza *current_pizza;
-    for(int i = 0 ; i < pizza_count; i++) {
+    for(unsigned int i = 0 ; i < pizza_count; i++) {
         // Getting ammount of ingredients
         input >> ingredient_count;
 
