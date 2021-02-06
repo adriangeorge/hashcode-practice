@@ -8,8 +8,8 @@ CFLAGS = -Wall -g
 # ****************************************************
 # Targets needed to bring the executable up to date
  
-main: main.o Pizza.o
-	$(CC) $(CFLAGS) -o main main.o Pizza.o
+main: main.o Pizza.o Package.o
+	$(CC) $(CFLAGS) -o pizza main.o Pizza.o Package.o
  
 # The main.o target can be written more simply
  
@@ -19,6 +19,9 @@ main.o: ./src/main.cpp
 Pizza.o: ./src/Pizza.cpp
 	$(CC) $(CFLAGS) -c ./src/Pizza.cpp
 
+Package.o: ./src/Package.cpp
+	$(CC) $(CFLAGS) -c ./src/Package.cpp
+
 clean:
 	rm *.o
-	rm main
+	rm pizza
